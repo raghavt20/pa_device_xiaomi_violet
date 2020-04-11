@@ -25,11 +25,11 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_violet
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_RAMDISK_OFFSET := 0x02000000
+BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CONFIG := vendor/lineage_violet_defconfig
 
 # Platform
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -38,7 +38,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 TARGET_USES_NQ_NFC := true
 
 # Partitions
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1610612736
+BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/violet/BoardConfigVendor.mk
