@@ -10,23 +10,23 @@ TARGET_SCREEN_DENSITY := 440
 # Inherit from sm6150-common
 -include device/xiaomi/sm6150-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/davinci
+DEVICE_PATH := device/xiaomi/violet
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := davinci,davinciin
+TARGET_OTA_ASSERT_DEVICE := violet
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_davinci
-TARGET_RECOVERY_DEVICE_MODULES := libinit_davinci
+TARGET_INIT_VENDOR_LIB := libinit_violet
+TARGET_RECOVERY_DEVICE_MODULES := libinit_violet
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_RAMDISK_OFFSET := 0x02000000
-TARGET_KERNEL_CONFIG := vendor/lineage_davinci_defconfig
+TARGET_KERNEL_CONFIG := vendor/lineage_violet_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno618
@@ -41,4 +41,4 @@ TARGET_USES_NQ_NFC := true
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1610612736
 
 # Inherit from the proprietary version
--include vendor/xiaomi/davinci/BoardConfigVendor.mk
+-include vendor/xiaomi/violet/BoardConfigVendor.mk
